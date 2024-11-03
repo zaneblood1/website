@@ -144,3 +144,26 @@ button:hover {
     width: 20px; /* Adjust size as needed */
     margin-left: 8px; /* Space between text and icon */
 }
+
+.toast {
+    visibility: hidden; /* Hidden by default */
+    min-width: 250px; /* Minimum width of toast */
+    margin-left: -125px; /* Center the toast */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded corners */
+    padding: 16px; /* Padding */
+    position: fixed; /* Position fixed */
+    z-index: 1; /* Sit on top */
+    left: 50%; /* Center the toast */
+    bottom: 30px; /* 30px from the bottom */
+    font-size: 17px; /* Font size */
+    transition: visibility 0s, opacity 0.5s linear; /* Transition effect */
+    opacity: 0; /* Hidden by default */
+}
+
+.toast.show {
+    visibility: visible; /* Show the toast */
+    opacity: 1; /* Fade in */
+}
