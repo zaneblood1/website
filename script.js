@@ -1,7 +1,7 @@
 function updateTime() {
     const now = new Date();
-    const day=now.getDay()
-    const month=now.getMonth()
+    const day=now.getDate()
+    const month=now.getMonth()+1 //Months are 0 indexed i.e. January = 0
     const year=now.getFullYear()
 
     let hours=now.getHours()
@@ -44,5 +44,12 @@ buttons.forEach(button => {
         setTimeout(() => {
             toast.classList.remove('show'); // Hide the toast after 3 seconds
         }, 3000);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const homeButton = document.getElementById('home');
+    homeButton.addEventListener('click', function() {
+        console.log("Navigating Home!");
     });
 });
