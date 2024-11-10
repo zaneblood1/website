@@ -46,10 +46,3 @@ buttons.forEach(button => {
         }, 3000);
     });
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const homeButton = document.getElementById('home');
-    homeButton.addEventListener('click', function() {
-        console.log("Navigating Home!");
-    });
-});
