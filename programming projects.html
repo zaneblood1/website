@@ -30,160 +30,173 @@
         </div>
 
         <div class="main-banner-bio">
+            <div class="gallery-display">
 
-            <p>
-                The following page contains a gallery of some of the personal programming projects I have worked on in the past.
-                A lot of these projects are animations of dynamical systems like Conway's Game of Life which evolve 
-                through time according to a certain set of rules given a collection of initial conditions. These dynamical systems are 
-                very visually beautiful, and they are what got me interested in pursuing a graduate education in computational
-                physics myself. If you want to download the code for any of these animations yourself, click on the big download
-                button next to each GIF, and start tinkering around with it. All of these animations are also available on my YouTube channel
-                as well, often with longer length run-throughs. 
-            </p>
+                <button onclick="loadLast()" class="forward-backward-button" title="Back">
+                    <img src="images/left arrow.png" style="height: 30px; border-radius: 10px;">
+                </button>
 
-            <div class="project-download-banner">
-                Conway's Game of Life
-                <button class="download-button" onclick="showAlert()" title="Download Repository">
-                    <a href="https://github.com/zaneblood1/The-Game-of-Life/archive/refs/heads/main.zip" download>
-                        <img src="images/download.png" style="height: 30px; border-radius: 10px;">
-                    </a>
+                <div class="display-container" id="gallery-1" style="display: block;">
+                    <div class="project-download-banner">
+                        Conway's Game of Life
+                        <button class="download-button" onclick="showAlert()" title="Download Repository">
+                            <a href="https://github.com/zaneblood1/The-Game-of-Life/archive/refs/heads/main.zip" download>
+                                <img src="images/download.png" style="height: 30px; border-radius: 10px;">
+                            </a>
+                        </button>
+                    </div>
+
+                    <div class="project-animation-containers">
+                        <video autoplay loop muted playsinline width="50%" preload="none">
+                            <source src="images/gosper glider.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>
+                        The following page contains a gallery of some of the personal programming projects I have worked on in the past.
+                        A lot of these projects are animations of dynamical systems like Conway's Game of Life (shown above) which evolve 
+                        through time according to a certain set of rules given a collection of initial conditions. These dynamical systems are 
+                        very visually beautiful, and they are what got me interested in pursuing a graduate education in computational
+                        physics myself. If you want to download the code for any of these animations yourself, click on the big download
+                        button next to each GIF, and start tinkering around with it. All of these animations are also available on my YouTube channel
+                        as well, often with longer length run-throughs. 
+                    </p>
+                </div>
+
+                <div class="display-container" id="gallery-2">
+                    <div class="project-download-banner">
+                        Quantum Billiards
+                        <button class="download-button" onclick="showAlert()" title="Download Repository">
+                            <a href="https://github.com/zaneblood1/Schrodinger-Equation-Animated/archive/refs/heads/main.zip" download>
+                                <img src="images/download.png" style="height: 30px; border-radius: 10px;">
+                            </a>
+                        </button>
+                    </div>
+
+                    <div class="project-animation-containers">
+                        <video autoplay loop muted playsinline width="50%" preload="none">
+                            <source src="images/TDSE.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>
+                        The above animation shows one of two simulations I wrote for my senior physics lab at Cornell. What you are looking at is a quantum billiards simulation in 2 dimensions. 
+                        A Gaussian pulse is sent toward the upper right corner with an initial 45 degree velocity and then bounces back and starts interacting with itself
+                        creating a bunch of interesting interference patterns. It took almost 4 hours to get the data for this 2-D wave packet simulation, but in my opinion 
+                        it was well worth it. I think its beautiful watching the trapped particle oscillate through different modes, and it's one of my favorite simulatons I have
+                        ever done. These animations were created using the Crank-Nicholson method and written in Jupyter Notebooks. The full YouTube video for this project
+                        also shows a 1-D wave packet tunneling through an infinite potential barrier, illustrating how certain quantum scenarios can lead to unexpected behavior.
+                    </p>
+                </div>
+
+                <div class="display-container" id="gallery-2">
+                    <div class="project-download-banner">
+                        The Boid Algorithm
+                        <button class="download-button" onclick="showAlert()" title="Download Repository">
+                            <a href="https://github.com/zaneblood1/Boid-Simulation/archive/refs/heads/main.zip" download>
+                                <img src="images/download.png" style="height: 30px; border-radius: 10px;">
+                            </a>
+                        </button>
+                    </div>
+
+                    <div class="project-animation-containers">
+                        <video autoplay loop muted playsinline width="50%" preload="none">
+                            <source src="images/boids3D.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>
+                        The Boid algorithm simulates flocking behavior of birds or insects. The system exhibits cohesion 
+                        (birds try to stay near their neighbors), alignment (birds align their velocities towards the 
+                        average velocity of the birds around them), and dispersion (birds cannot get too close to each other). I was inspired by
+                        the Coding Train's video on the algoritm, and took his 2D code and reworked it to function in 3D. In the future I would like to 
+                        take the point particle representations of these "Birds" and give them a head and body as well as non-zero volume. 
+                    </p>
+                </div>
+
+                <div class="display-container" id="gallery-3">
+                    <div class="project-download-banner">
+                        Sorting Algorithms
+                        <button class="download-button" onclick="showAlert()" title="Download Repository">
+                            <a href="https://github.com/zaneblood1/sorting-algorithms-animation/archive/refs/heads/main.zip" download>
+                                <img src="images/download.png" style="height: 30px; border-radius: 10px;">
+                            </a>
+                        </button>
+                    </div>
+
+                    <div class="project-animation-containers">
+                        <video autoplay loop muted playsinline width="50%" preload="none">
+                            <source src="images/sorting algos.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>
+                        In this demo, I wrote a script in Processing that visualizes some common and some less common but still
+                        interesting sorting algorithms. A lot was learned in this process, particularly the difficulty of animating
+                        recursive versus iterative algorithms. For those that are recursive, it turns out that one will need to implement
+                        a multi-threaded approach in the animating code. My favorite algorithm here is the "Cocktail Shaker Sort". After watching
+                        the video I think it is clear to see why it was given its name. The full YouTube video for this animation more clearly labels
+                        which algorithm is which for those that would like to learn more. 
+                    </p>
+                </div>
+
+                <div class="display-container" id="gallery-4">
+                    <div class="project-download-banner">
+                        Searching Algorithms
+                        <button class="download-button" onclick="showAlert()" title="Download Repository">
+                            <a href="https://github.com/zaneblood1/searchingVisualized/archive/refs/heads/main.zip" download>
+                                <img src="images/download.png" style="height: 30px; border-radius: 10px;">
+                            </a>
+                        </button>
+                    </div>
+
+                    <div class="project-animation-containers">
+                        <video autoplay loop muted playsinline width="50%" preload="none">
+                            <source src="images/searching algos.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>
+                        Another purely CS-based project and a logical follow-up to the Sorting Algorithms project, I decided
+                        to animate some common searching algorithms in Processing. I think my favorite is the breadth first
+                        search priority queue as the logic is relatively simple to understand and something one might think of 
+                        right off the bat when designing a searching algorithm from scratch. However, the most visually appealing 
+                        is Dijkstra's as we animate both the BFS stage and the final path of least resistance. The shuffle button was
+                        a cool little feature of this project so that each shuffle created a new map. Like with Conway's Game of Life,
+                        I would like to add user input into this project so that anyone could create their own custom maps.
+                    </p>
+                </div>
+
+                <div class="display-container" id="gallery-5">
+                    <div class="project-download-banner">
+                        The Lorenz System
+                        <button class="download-button" onclick="showAlert()" title="Download Repository">
+                            <a href="https://github.com/zaneblood1/The-Lorenz-System-Animated/archive/refs/heads/main.zip" download>
+                                <img src="images/download.png" style="height: 30px; border-radius: 10px;">
+                            </a>
+                        </button>
+                    </div>
+
+                    <div class="project-animation-containers">
+                        <video autoplay loop muted playsinline width="50%" preload="none">
+                            <source src="images/lorenz animation.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>
+                        The last project listed here animates the famous Lorenz Attractor. The set of Lorenz Equations are related to a model of the weather and they
+                        are a chaotic system. This is what brought the butterfly effect into mainstream popular science. This set of equations represents a chaotic system. There are 
+                        a few different ways to define a chaotic system, but some common attributes are that they never diverge to infinity, they never revisit the same location,
+                        and an initially small disturbance in starting conditions can lead to wildly different outcomes over just a few time steps. There are a lot more
+                        animations of the Lorenz Attractor on my YouTube channel which show different cross sections and other effects like the fast divergence of close
+                        initial conditions. 
+                    </p>
+                </div>
+
+                <button onclick="loadNext()" class="forward-backward-button" title="Next">
+                    <img src="images/right arrow.png" style="height: 30px; border-radius: 10px;">
                 </button>
             </div>
-
-            <div class="project-animation-containers">
-                <video autoplay loop muted playsinline width="50%">
-                    <source src="images/gosper glider.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <p>
-                The above GIF shows Conway's Game of Life - which is a zero player game where the result at any time step is determined
-                by the initial conditions and the dynamics of the game. This game simulates living systems
-                where each cell either lives, dies, or regrows based on the resources around it. In this simulation
-                we have the famous Gosper Glider that will go on indefintely. This code was written in Jupyter Notebooks
-                and the animation done with Matplotlib. In the future, I would like to make this code accept user input
-                so that someone could draw out an initial condition and then click play to evolve the system ad hoc.
-            </p>
-
-            <div class="project-download-banner">
-                Quantum Billiards
-                <button class="download-button" onclick="showAlert()" title="Download Repository">
-                    <a href="https://github.com/zaneblood1/Schrodinger-Equation-Animated/archive/refs/heads/main.zip" download>
-                        <img src="images/download.png" style="height: 30px; border-radius: 10px;">
-                    </a>
-                </button>
-            </div>
-
-            <div class="project-animation-containers">
-                <video autoplay loop muted playsinline width="50%">
-                    <source src="images/TDSE.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <p>
-                The above animation shows one of two simulations I wrote for my senior physics lab at Cornell. What you are looking at is a quantum billiards simulation in 2 dimensions. 
-                A Gaussian pulse is sent toward the upper right corner with an initial 45 degree velocity and then bounces back and starts interacting with itself
-                creating a bunch of interesting interference patterns. It took almost 4 hours to get the data for this 2-D wave packet simulation, but in my opinion 
-                it was well worth it. I think its beautiful watching the trapped particle oscillate through different modes, and it's one of my favorite simulatons I have
-                ever done. These animations were created using the Crank-Nicholson method and written in Jupyter Notebooks. The full YouTube video for this project
-                also shows a 1-D wave packet tunneling through an infinite potential barrier, illustrating how certain quantum scenarios can lead to unexpected behavior.
-            </p>
-
-            <div class="project-download-banner">
-                The Boid Algorithm
-                <button class="download-button" onclick="showAlert()" title="Download Repository">
-                    <a href="https://github.com/zaneblood1/Boid-Simulation/archive/refs/heads/main.zip" download>
-                        <img src="images/download.png" style="height: 30px; border-radius: 10px;">
-                    </a>
-                </button>
-            </div>
-
-            <div class="project-animation-containers">
-                <video autoplay loop muted playsinline width="50%">
-                    <source src="images/boids3D.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <p>
-                The Boid algorithm simulates flocking behavior of birds or insects. The system exhibits cohesion 
-                (birds try to stay near their neighbors), alignment (birds align their velocities towards the 
-                average velocity of the birds around them), and dispersion (birds cannot get too close to each other). I was inspired by
-                the Coding Train's video on the algoritm, and took his 2D code and reworked it to function in 3D. In the future I would like to 
-                take the point particle representations of these "Birds" and give them a head and body as well as non-zero volume. 
-            </p>
-
-            <div class="project-download-banner">
-                Sorting Algorithms
-                <button class="download-button" onclick="showAlert()" title="Download Repository">
-                    <a href="https://github.com/zaneblood1/sorting-algorithms-animation/archive/refs/heads/main.zip" download>
-                        <img src="images/download.png" style="height: 30px; border-radius: 10px;">
-                    </a>
-                </button>
-            </div>
-
-            <div class="project-animation-containers">
-                <video autoplay loop muted playsinline width="50%">
-                    <source src="images/sorting algos.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <p>
-                In this demo, I wrote a script in Processing that visualizes some common and some less common but still
-                interesting sorting algorithms. A lot was learned in this process, particularly the difficulty of animating
-                recursive versus iterative algorithms. For those that are recursive, it turns out that one will need to implement
-                a multi-threaded approach in the animating code. My favorite algorithm here is the "Cocktail Shaker Sort". After watching
-                the video I think it is clear to see why it was given its name. The full YouTube video for this animation more clearly labels
-                which algorithm is which for those that would like to learn more. 
-            </p>
-
-            <div class="project-download-banner">
-                Searching Algorithms
-                <button class="download-button" onclick="showAlert()" title="Download Repository">
-                    <a href="https://github.com/zaneblood1/searchingVisualized/archive/refs/heads/main.zip" download>
-                        <img src="images/download.png" style="height: 30px; border-radius: 10px;">
-                    </a>
-                </button>
-            </div>
-
-            <div class="project-animation-containers">
-                <video autoplay loop muted playsinline width="50%">
-                    <source src="images/searching algos.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <p>
-                Another purely CS-based project and a logical follow-up to the Sorting Algorithms project, I decided
-                to animate some common searching algorithms in Processing. I think my favorite is the breadth first
-                search priority queue as the logic is relatively simple to understand and something one might think of 
-                right off the bat when designing a searching algorithm from scratch. However, the most visually appealing 
-                is Dijkstra's as we animate both the BFS stage and the final path of least resistance. The shuffle button was
-                a cool little feature of this project so that each shuffle created a new map. Like with Conway's Game of Life,
-                I would like to add user input into this project so that anyone could create their own custom maps.
-            </p>
-
-            <div class="project-download-banner">
-                The Lorenz System
-                <button class="download-button" onclick="showAlert()" title="Download Repository">
-                    <a href="https://github.com/zaneblood1/The-Lorenz-System-Animated/archive/refs/heads/main.zip" download>
-                        <img src="images/download.png" style="height: 30px; border-radius: 10px;">
-                    </a>
-                </button>
-            </div>
-
-            <div class="project-animation-containers">
-                <video autoplay loop muted playsinline width="50%">
-                    <source src="images/lorenz animation.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <p>
-                The last project listed here animates the famous Lorenz Attractor. The set of Lorenz Equations are related to a model of the weather and they
-                are a chaotic system. This is what brought the butterfly effect into mainstream popular science. This set of equations represents a chaotic system. There are 
-                a few different ways to define a chaotic system, but some common attributes are that they never diverge to infinity, they never revisit the same location,
-                and an initially small disturbance in starting conditions can lead to wildly different outcomes over just a few time steps. There are a lot more
-                animations of the Lorenz Attractor on my YouTube channel which show different cross sections and other effects like the fast divergence of close
-                initial conditions. 
-            </p>
         </div>
 
         <div class="bottom-nav-bar">

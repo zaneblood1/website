@@ -84,3 +84,21 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.gallery-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.display-container {
+    display: none;
+}
+
+.forward-backward-button {
+    margin-left: 15px;
+    margin-right: 25px;
+    justify-content: center; 
+    align-items: center;
+}
+
