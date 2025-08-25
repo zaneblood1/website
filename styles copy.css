@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+button {
+  background-color: white;  
+  color: black;
+
+  border-radius: 10px;
+  border: none;
+
+  padding: 7px;
+  margin: 7px;
+
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: blue;  
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.top-nav-bar{
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-nav-bar{
+    background-color: lightblue;
+    padding: 10px;
+    margin: 50px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    font-size: xx-large;
+}
+
+.main-banner-bio {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.project-animation-containers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.project-download-banner {
+    display: flex;  
+    align-items: center;
+    font-size: xx-large;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.download-button {
+    margin-left: 15px;
+    margin-right: 25px;
+    justify-content: center; 
+    align-items: center;
+}
+
+.solution-block {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
